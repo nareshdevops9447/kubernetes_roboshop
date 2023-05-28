@@ -3,10 +3,10 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: resource
+  name: stress
 spec: 
   container:
-    - name: resource
+    - name: stress
       image: stress
       imagePullPolicy: Always
       command: ["sleep","200"]
