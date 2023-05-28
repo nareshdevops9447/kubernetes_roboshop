@@ -1,0 +1,12 @@
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: resource
+spec: 
+  container:
+    - name: resource
+      image: stress
+      imagePullPolicy: Always
+      
