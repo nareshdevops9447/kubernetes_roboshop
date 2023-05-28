@@ -9,4 +9,4 @@ spec:
     - name: resource
       image: stress
       imagePullPolicy: Always
-      
+      command: ["sleep","200"]
