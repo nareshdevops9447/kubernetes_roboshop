@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config-resource
+data:
+  course: kubernetes and docker
+  duration: 30hrs
+  
