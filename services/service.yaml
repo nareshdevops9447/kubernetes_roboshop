@@ -5,7 +5,7 @@ kind: Pod
 metadata: 
   name: nginx
   labels:
-    name: nginx
+    name1: nginx
 spec:
   containers:
     - name: nginx
@@ -21,7 +21,7 @@ metadata:
   name: nginx-service  
 spec:
   selector:
-    name: nginx
+    name1: nginx
   ports:
     - protocal: tcp
       port: 80

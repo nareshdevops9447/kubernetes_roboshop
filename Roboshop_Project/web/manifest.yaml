@@ -1,0 +1,39 @@
+---
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: web
+  labels:
+    tier: frontend
+    name: web
+spec:
+  containers:
+    - name: web
+      imagePullPolicy: Always
+      image: nareshaws121/web:k8
+      resources:
+        requests:
+          cpu: "100m"
+          memory: "128Mi"
+        limits:
+          cpu: "100m"
+          memory: "128Mi"
+        ports:
+          - containerPort: 80
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-service  
+spec:
+  type: LoadBalancer
+  selector:
+    tier: frontend
+    name: web
+  ports:
+    - protocal: tcp
+      port: 80
+      targetPort: 80
+      
